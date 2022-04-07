@@ -3,11 +3,17 @@ import { Component } from "react";
 import './ToDoItems.css';
 
 class ToDoItems extends Component {
-
+  delete(key) {
+    this.props.delete(key);
+  }
 
   createTasks = (item) => {
-    return <li key= {item.key}>{item.text}</li>
+    return <li 
+    onClick={() => this.delete(item.key)}
+    key= {item.key}>{item.text}</li>
   }
+
+  
 
   render(){
 
