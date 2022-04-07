@@ -1,0 +1,20 @@
+.inputT{
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #fff;
+  width: 165px;
+}
+
+.btn_head:hover {
+  background-color: #003399;
+}
+
+.btn_head {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  color: #fff;
+  background-color: #0066ff;
+  border: 2px solid #0066ff;
+}
+

@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import './ToDoList';
+import './ToDoList.css';
 import ToDoItems from "../toDoItems/ToDoItems";
 
 class ToDoList extends Component {
@@ -34,11 +34,11 @@ class ToDoList extends Component {
 
   render(){
     return(
-      <div className="toListMain">
+      <div className="todoListMain">
         <div className="header">
           <form onSubmit={this.addItem}>
-            <input ref={a => this._inputElement = a} placeholder="Enter task" />
-            <button type="submit">OK</button>
+            <input class='inputT' ref={a => this._inputElement = a} placeholder="Enter task" />
+            <button class="btn_head" type="submit">OK</button>
           </form>
         </div>
           <ToDoItems entries={this.state.items}/>
