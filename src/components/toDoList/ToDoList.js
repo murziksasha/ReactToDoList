@@ -12,24 +12,31 @@ class ToDoList extends Component {
   }
 
   addItem = (e) => {
-    e.preventDefault();
-    const itemArray = this.state.items;
-    if(this._inputElement.value !== '') {
-      itemArray.unshift({
-        text: this._inputElement.value,
-        key: Date.now()
-      });
+      e.preventDefault();
+      const itemArray = this.state.items;
+      if(this._inputElement.value !== '') {
+        itemArray.unshift({
+          text: this._inputElement.value,
+          key: Date.now()
+        });
 
-      this.setState({
-        items: itemArray
-      })
 
-      this._inputElement.value = '';
-      console.log(itemArray);
+
+        this.setState({
+          items: itemArray
+        })
+
+        this._inputElement.value = '';
+        console.log(itemArray);
+      }
     }
 
+    deleteItem = (key) => {
+      const filteredItems = this.state.items.filter((item) => item.key!== key);
 
-
+     this.setState({
+       items: filteredItems
+     });
   }
 
   render(){
